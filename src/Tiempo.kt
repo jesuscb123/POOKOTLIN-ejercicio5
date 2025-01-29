@@ -106,7 +106,7 @@ class Tiempo(var hora: Int, var min: Int, var seg: Int) {
      * @return El tiempo total en segundos.
      */
     private fun obtenerSegundos(): Int {
-        var horasSegundos = hora * 120
+        var horasSegundos = hora * 60 * 60
         var minutosSegundos = min * 60
         var TotalSegundos = horasSegundos + minutosSegundos + seg
         return TotalSegundos
@@ -214,9 +214,9 @@ class Tiempo(var hora: Int, var min: Int, var seg: Int) {
      */
     fun sumar(t: Tiempo): Tiempo? {
         if (incrementar(t)) {
-            val tiempoincrementado = Tiempo(this.hora,this.min,this.seg)
+            val tiempoincrementado = Tiempo(this.hora, this.min, this.seg)
             return tiempoincrementado
-        }else{
+        } else {
             return null
         }
     }

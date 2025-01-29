@@ -24,7 +24,6 @@ fun main(){
 
     var tiempo1 = Tiempo(hora,minuto,segundo)
     var tiempo2 = Tiempo(hora,minuto)
-    tiempo1.incrementar(tiempo2)
-    tiempo2.incrementar(tiempo1)
-    val tiempo_copiado = tiempo2.copiar()
+    println(tiempo1.sumar(tiempo2))
+
 }
